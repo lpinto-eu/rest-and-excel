@@ -1,13 +1,20 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 
+<!-- Based on MKyong example @ http://www.mkyong.com/webservices/jax-rs/file-upload-example-in-resteasy/  -->
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>JAX-RS Upload Form</h1>
+
+        <!-- NOTE: this form assumes that this project runs on port 8080 under rest-and-excel path -->
+        <form action="http://localhost:8080/rest-and-excel/excel/upload" method="post" enctype="multipart/form-data">
+
+            <p>
+                Select a file : <input type="file" name="uploadedFile" size="50" />
+            </p>
+
+            <input type="submit" value="Upload It" />
+        </form>
+
     </body>
 </html>
